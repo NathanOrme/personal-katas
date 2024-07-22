@@ -3,7 +3,7 @@
 <!-- TOC -->
 
 * [Happy Number Kata](#happy-number-kata)
-    * [What's a Perfect Number?](#whats-a-perfect-number)
+    * [What's a Happy Number?](#whats-a-happy-number)
         * [Example Happy Number](#example-happy-number)
             * [Happy numbers between 1 and 100](#happy-numbers-between-1-and-100)
             * [Happy numbers between 101 and 500](#happy-numbers-between-101-and-500)
@@ -11,11 +11,11 @@
     * [What's the task?](#whats-the-task)
         * [Minimum requirements](#minimum-requirements)
         * [Optional Extras](#optional-extras)
-    * [Things to consider:](#things-to-consider)
+    * [Things to consider](#things-to-consider)
 
 <!-- TOC -->
 
-## What's a Perfect Number?
+## What's a Happy Number?
 
 From: [Numeracy Literacy](https://numeracyliteracy.com/happy-and-unhappy-numbers/)
 
@@ -28,11 +28,11 @@ unhappy or sad numbers.
 
 23 is a happy number as:
 
-23 = 22 + 32 = 4 + 9 = 13 (sum of the squares of its digits)
+23 = 2^2 + 3^2 = 4 + 9 = 13 (sum of the squares of its digits)
 
-13 = 12 + 32 = 1 + 9 = 10 (sum of the squares of the digits)
+13 = 1^2 + 3^2 = 1 + 9 = 10 (sum of the squares of the digits)
 
-10 = 12 + 02 = 1 (sum of the squares of the digits)
+10 = 1^2 + 0^2 = 1 (sum of the squares of the digits)
 
 #### Happy numbers between 1 and 100
 
@@ -68,7 +68,7 @@ unhappy or sad numbers.
   ```
 - Change the output so that it shows a map of a happy number, and it's associated divisors
 
-## Things to consider:
+## Things to consider
 
 - Use Git and commit code as & when - don't do a "big bang" push for your code
 - Don't over-engineer the code
