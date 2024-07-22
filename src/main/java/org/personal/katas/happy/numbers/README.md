@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 * [Happy Number Kata](#happy-number-kata)
+    * [Complexity](#complexity)
     * [What's a Happy Number?](#whats-a-happy-number)
         * [Example Happy Number](#example-happy-number)
             * [Happy numbers between 1 and 100](#happy-numbers-between-1-and-100)
@@ -14,6 +15,10 @@
     * [Things to consider](#things-to-consider)
 
 <!-- TOC -->
+
+## Complexity
+
+Hard
 
 ## What's a Happy Number?
 
@@ -66,7 +71,7 @@ unhappy or sad numbers.
   Example output:
   For the number 28, the following happy number numbers were found: 1, 7, 10, 13, 19, 23, 28
   ```
-  
+
 ## Things to consider
 
 - Use Git and commit code as & when - don't do a "big bang" push for your code

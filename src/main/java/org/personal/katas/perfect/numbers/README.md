@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 * [Perfect Number Kata](#perfect-number-kata)
+    * [Complexity](#complexity)
     * [What's a Perfect Number?](#whats-a-perfect-number)
         * [Example Perfect Numbers](#example-perfect-numbers)
     * [What's the task?](#whats-the-task)
@@ -12,6 +13,10 @@
         * [Useful Resources](#useful-resources)
 
 <!-- TOC -->
+
+## Complexity
+
+Medium
 
 ## What's a Perfect Number?
 
