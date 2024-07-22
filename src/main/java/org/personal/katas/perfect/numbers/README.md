@@ -1,13 +1,16 @@
 # Perfect Number Kata
 
 <!-- TOC -->
+
 * [Perfect Number Kata](#perfect-number-kata)
-  * [What's a Perfect Number?](#whats-a-perfect-number)
-    * [Example Perfect Numbers](#example-perfect-numbers)
-  * [What's the task?](#whats-the-task)
-    * [Minimum requirements](#minimum-requirements)
-    * [Optional Extras](#optional-extras)
-  * [Things to consider:](#things-to-consider)
+    * [What's a Perfect Number?](#whats-a-perfect-number)
+        * [Example Perfect Numbers](#example-perfect-numbers)
+    * [What's the task?](#whats-the-task)
+        * [Minimum requirements](#minimum-requirements)
+        * [Optional Extras](#optional-extras)
+    * [Things to consider](#things-to-consider)
+        * [Useful Resources](#useful-resources)
+
 <!-- TOC -->
 
 ## What's a Perfect Number?
@@ -15,6 +18,7 @@
 A perfect number in Mathematics is when a number's divisors add up the number itself.
 
 ### Example Perfect Numbers
+
 6 is a perfect number as its divisors (1, 2 and 3) add up to 6.
 
 28 is another perfect number  (1, 2, 4, 7, 14)
@@ -37,7 +41,11 @@ A perfect number in Mathematics is when a number's divisors add up the number it
   ```
 - Change the output so that it shows a map of a perfect number, and it's associated divisors
 
-## Things to consider:
+## Things to consider
 
 - Use Git and commit code as & when - don't do a "big bang" push for your code
 - Don't over-engineer the code
+
+### Useful Resources
+
+https://www.tutorialspoint.com/Find-all-divisors-of-a-natural-number-in-java
