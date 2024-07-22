@@ -34,30 +34,21 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Generate Git Tag Version
+      - name: Generate release tag
         if: github.ref == 'refs/heads/main'
-        id: generate_tag
-        run: |
-          VERSION_PREFIX="v"
-          VERSION_MAJOR_MINOR="1.0"
-          VERSION_PATCH=$(git tag --list "${VERSION_PREFIX}${VERSION_MAJOR_MINOR}.*" --sort=-version:refname | head -n 1 | grep -oE '[0-9]+$')
-          if [ -z "$VERSION_PATCH" ]; then
-            VERSION_PATCH=0
-          else
-            VERSION_PATCH=$((VERSION_PATCH + 1))
-          fi
-          NEW_TAG="${VERSION_PREFIX}${VERSION_MAJOR_MINOR}.${VERSION_PATCH}"
-          echo "Generated new tag: $NEW_TAG"
-          echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
-            - name: Create Tag
-
-      - name: Create Tag
-        if: github.ref == 'refs/heads/main'
-        uses: rickstaa/action-create-tag@v1
-        id: "tag_create"
+        id: generate_release_tag
+        uses: amitsingh-007/next-release-tag@v6.0.0
         with:
-          tag: ${{env.NEW_TAG}}
-          tag_exists_error: false
-          message: "Latest release"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_prefix: 'v'
+          tag_template: 'yyyy.mm.dd.i'
 
+      - name: Create Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ steps.generate_release_tag.outputs.next_release_tag }}
+          tag_name: ${{ steps.generate_release_tag.outputs.next_release_tag }}
+          token: ${{secrets.GITHUB_TOKEN}}
+          generate_release_notes: true
       
