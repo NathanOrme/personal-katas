@@ -66,8 +66,7 @@ unhappy or sad numbers.
   Example output:
   For the number 28, the following happy number numbers were found: 1, 7, 10, 13, 19, 23, 28
   ```
-- Change the output so that it shows a map of a happy number, and it's associated divisors
-
+  
 ## Things to consider
 
 - Use Git and commit code as & when - don't do a "big bang" push for your code
