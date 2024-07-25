@@ -1,6 +1,7 @@
 package org.personal.katas.perfect.numbers;
 
 import org.junit.jupiter.api.Test;
+import org.personal.katas.divisor.numbers.DivisorsChecker;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PerfectNumberCheckerTest {
 
-    private final PerfectNumberChecker perfectNumberChecker = new PerfectNumberChecker();
+    private final DivisorsChecker divisorsChecker = new DivisorsChecker();
+
+    private final PerfectNumberChecker perfectNumberChecker = new PerfectNumberChecker(divisorsChecker);
 
     @Test
     void check_5_returnsFalse() {

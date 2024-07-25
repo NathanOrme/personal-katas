@@ -8,8 +8,11 @@ import java.util.stream.IntStream;
 @NoArgsConstructor
 public class DivisorsChecker {
 
-    public List<Integer> getDivisorsForNumber(final int number) {
-        return IntStream.rangeClosed(1, number)
+    public List<Integer> getDivisorsForNumber(final int number, final boolean inclusive) {
+        IntStream intStream = inclusive
+                ? IntStream.rangeClosed(1, number)
+                : IntStream.range(1, number);
+        return intStream
                 .filter(divisor -> number % divisor == 0)
                 .boxed()
                 .toList();

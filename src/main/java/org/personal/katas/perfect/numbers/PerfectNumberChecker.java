@@ -1,18 +1,18 @@
 package org.personal.katas.perfect.numbers;
 
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.personal.katas.divisor.numbers.DivisorsChecker;
 
 import java.util.List;
 import java.util.stream.IntStream;
 
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class PerfectNumberChecker {
 
+    private final DivisorsChecker divisorsChecker;
+
     public boolean checkIfPerfectNumber(final int number) {
-        List<Integer> divisors = IntStream.rangeClosed(1, number / 2)
-                .filter(potentialDivisor -> number % potentialDivisor == 0)
-                .boxed()
-                .toList();
+        List<Integer> divisors = divisorsChecker.getDivisorsForNumber(number, false);
         return divisors.stream().mapToInt(Integer::intValue).sum() == number;
     }
 
