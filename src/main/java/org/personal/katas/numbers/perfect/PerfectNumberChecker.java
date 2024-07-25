@@ -1,7 +1,7 @@
-package org.personal.katas.perfect.numbers;
+package org.personal.katas.numbers.perfect;
 
 import lombok.RequiredArgsConstructor;
-import org.personal.katas.divisor.numbers.DivisorsChecker;
+import org.personal.katas.numbers.divisor.DivisorsChecker;
 
 import java.util.List;
 import java.util.stream.IntStream;

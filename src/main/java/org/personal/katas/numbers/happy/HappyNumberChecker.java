@@ -1,4 +1,4 @@
-package org.personal.katas.happy.numbers;
+package org.personal.katas.numbers.happy;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
