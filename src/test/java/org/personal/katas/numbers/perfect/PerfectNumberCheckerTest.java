@@ -1,4 +1,4 @@
-package org.personal.katas.perfect.numbers;
+package org.personal.katas.numbers.perfect;
 
 import org.junit.jupiter.api.Test;
 import org.personal.katas.divisor.numbers.DivisorsChecker;
