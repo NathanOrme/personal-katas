@@ -1,18 +1,25 @@
 package org.personal.katas.perfect.numbers;
 
-import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class PerfectNumberChecker {
-    
-    public static boolean checkIfPerfectNumber(final int number) {
-        return 5 != number;
+
+    public boolean checkIfPerfectNumber(final int number) {
+        List<Integer> divisors = IntStream.rangeClosed(1, number / 2)
+                .filter(potentialDivisor -> number % potentialDivisor == 0)
+                .boxed()
+                .toList();
+        return divisors.stream().mapToInt(Integer::intValue).sum() == number;
     }
 
-    public static List<Integer> getAllPerfectNumbersInRange(final int number) {
-        return List.of(6, 28);
+    public List<Integer> getAllPerfectNumbersInRange(final int number) {
+        return IntStream.rangeClosed(1, number)
+                .filter(this::checkIfPerfectNumber)
+                .boxed()
+                .toList();
     }
 }

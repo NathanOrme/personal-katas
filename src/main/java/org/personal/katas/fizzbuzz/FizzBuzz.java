@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 @NoArgsConstructor
 public class FizzBuzz {
 
-    public static String checkNumber(final int number) {
+    public String checkNumber(final int number) {
         if (number % 15 == 0) {
             return "FizzBuzz";
         } else if (number % 5 == 0) {
@@ -21,10 +21,10 @@ public class FizzBuzz {
     }
 
 
-    public static List<String> checkRangeOfNumbers(final int number) {
+    public List<String> checkRangeOfNumbers(final int number) {
         return Stream.iterate(1, n -> n + 1)
                 .limit(number)
-                .map(FizzBuzz::checkNumber)
+                .map(this::checkNumber)
                 .toList();
     }
 }

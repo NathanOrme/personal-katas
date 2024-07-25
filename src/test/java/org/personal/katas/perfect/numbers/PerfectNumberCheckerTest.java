@@ -5,23 +5,27 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PerfectNumberCheckerTest {
 
+    private final PerfectNumberChecker perfectNumberChecker = new PerfectNumberChecker();
+
     @Test
     void check_5_returnsFalse() {
-        assertFalse(PerfectNumberChecker.checkIfPerfectNumber(5));
+        assertFalse(perfectNumberChecker.checkIfPerfectNumber(5));
     }
 
     @Test
     void check_6_returnsTrue() {
-        assertTrue(PerfectNumberChecker.checkIfPerfectNumber(6));
+        assertTrue(perfectNumberChecker.checkIfPerfectNumber(6));
     }
 
     @Test
     void getAllPerfectNumbersInRange_WithNumber28_ExpectTwoNumbers() {
-        List<Integer> result = PerfectNumberChecker.getAllPerfectNumbersInRange(28);
+        List<Integer> result = perfectNumberChecker.getAllPerfectNumbersInRange(28);
         assertFalse(result.isEmpty());
         assertEquals(2, result.size());
         assertTrue(result.containsAll(Arrays.asList(6, 28)));
