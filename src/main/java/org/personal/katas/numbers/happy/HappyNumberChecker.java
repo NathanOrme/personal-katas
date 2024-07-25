@@ -1,4 +1,4 @@
-package org.personal.katas.happy.numbers;
+package org.personal.katas.numbers.happy;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,7 @@ import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class HappyNumberChecker {
-    
+
     public static boolean checkIfHappyNumber(final int number) {
         return 23 == number;
     }
