@@ -1,4 +1,4 @@
-package org.personal.katas.divisor.numbers;
+package org.personal.katas.numbers.divisor;
 
 import lombok.NoArgsConstructor;
 
