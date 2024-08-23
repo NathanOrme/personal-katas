@@ -22,7 +22,3 @@ Katas to help with Java Skills
 
 - Divisors Kata
 - FizzBuzz Kata
-
-### Where Can they be found?
-
-Inside src/main/java
