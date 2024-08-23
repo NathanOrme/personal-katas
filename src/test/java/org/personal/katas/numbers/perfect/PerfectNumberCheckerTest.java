@@ -1,7 +1,7 @@
 package org.personal.katas.numbers.perfect;
 
 import org.junit.jupiter.api.Test;
-import org.personal.katas.divisor.numbers.DivisorsChecker;
+import org.personal.katas.numbers.divisor.DivisorsChecker;
 
 import java.util.Arrays;
 import java.util.List;
